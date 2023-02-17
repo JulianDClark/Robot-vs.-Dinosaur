@@ -1,7 +1,8 @@
 import random
 class dinosaur:
-    def __init__(self, name):
+    def __init__(self, name, type):
      self.name = name
+     self.type = type
      self.health = 100
      self.attacks = ['Tail Whip']
      self.create_attack()
