@@ -1,7 +1,8 @@
 import random
 class robot:
-    def __init__(self, name):
+    def __init__(self, name, type):
      self.name = name
+     self.type = type
      self.health = 100
      self.attacks = ['electric shock']
      self.create_attack()

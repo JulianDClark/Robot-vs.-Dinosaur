@@ -18,3 +18,10 @@ print(f'{dinosaur.name} is a {dinosaur.type}')
 SENTINEL = robot('SENTINEL', 'Machine')
 print(f'{SENTINEL.name} is a {robot.type}')
  
+while BLUE.health > 0 and SENTINEL.health  > 0:
+    BLUE.attack(SENTINEL)
+    SENTINEL.attack(BLUE)
+    if BLUE.health > SENTINEL.health:
+        print(f'{dinosaur.name} is the winner of the match')
+else: 
+    print(f'{robot.name} is the winner of the match')
