@@ -10,7 +10,7 @@
 #(5 points): As a developer, I want to choose from a List of 3 possible weapons before a robot makes an attack. 
 #(5 points): As a developer, I want to create 2 additional Fleet and Herd classes, allowing for a list of 3 Robots to battle against a list of 3 Dinosaurs.
 
-from mainimport dinosaur
+from Dinosaur import dinosaur
 from main import robot
 blue = dinosaur('blue', 'raptor')
 sentinel = robot('sentinel', 'robot')
@@ -18,6 +18,11 @@ blue.create_attacks()
 print(f'{blue.name} is a {blue.type}')
 print(f'{sentinel.name} is a {sentinel.type}')
 
-blue.attack(sentinel)
+while blue.health > 0 and sentinel.health > 0:
+    blue.attack(sentinel)
 sentinel.attack(blue)
-blue.attack(sentinel)
+if blue.health > sentinel.health:
+    print(f'{blue.name} is the winner')
+else:
+    print(f'{sentinel.name} is the winner')
+
